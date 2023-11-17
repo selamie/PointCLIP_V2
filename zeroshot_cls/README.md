@@ -22,6 +22,8 @@ conda create -n clipoint python=3.7
 conda activate clipoint
 
 pip install -r requirements.txt
+#pip install torch seemed to work better than conda pytorch
+#still having issues with setup though
 
 # Install the according versions of torch and torchvision
 conda install pytorch torchvision cudatoolkit
