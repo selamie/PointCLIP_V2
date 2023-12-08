@@ -18,7 +18,8 @@ The zero-shot results on the full test set of ModelNet40 and ScanObjectNN are:
 ### Installation
 This has been edited by @selamie with what worked on MAIL lab alienware PC. 
 - when troubleshooting GPU, get it to work with torch on its own before trying to get the whole repository functional
-- pip install torch seemed to work better than conda version
+- `pip install torch` seemed to work better than `conda install pytorch` version
+  
 Create a conda environment and install dependencies:
 ```bash
 conda create -n clipoint python=3.7
