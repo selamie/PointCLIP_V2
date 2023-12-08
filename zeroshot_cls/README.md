@@ -16,17 +16,22 @@ The zero-shot results on the full test set of ModelNet40 and ScanObjectNN are:
 ## Requirements
 
 ### Installation
+This has been edited by Selam with what worked on MAIL lab alienware PC. 
+- when troubleshooting GPU, get it to work with torch on its own before trying to get the whole repository functional
+- pip install torch seemed to work better than conda version
 Create a conda environment and install dependencies:
 ```bash
 conda create -n clipoint python=3.7
 conda activate clipoint
+conda install cudatoolkit
+
+pip install torch torchvision
+pip install torch-scatter
+
+#(version in requirements.txt removed by @selamie) 
+#(torch-scatter version must match torch & cuda version)
 
 pip install -r requirements.txt
-#pip install torch seemed to work better than conda pytorch
-#still having issues with setup though
-
-# Install the according versions of torch and torchvision
-conda install pytorch torchvision cudatoolkit
 
 # Install the modified dassl library (no need to re-build if the source code is changed)
 # Under CLIPoint/zeroshot_fewshot_cls folder:
@@ -46,6 +51,7 @@ After download, the directory structure should be:
 │   ├──modelnet40_ply_hdf5_2048/
 │   ├──scanobjectnn/
 ├──...
+#you may need to edit the names of folders, check python errors if necessary
 ```
 
 ## Get Started
